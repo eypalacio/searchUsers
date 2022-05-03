@@ -1,0 +1,104 @@
+.cont-dashboard {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .sidebar {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .busqueda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        width: 50%;
+        margin-left: 70px;
+        h1{
+            text-align: start;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .search-box{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 40px;
+            border-radius: 5em;
+            background: rgba($color: #ffffff, $alpha: 0.4);
+            .input-search{
+                outline: none;
+                border: none;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                padding-left: 20px;
+                text-overflow: ellipsis;
+                padding-right: 40px;
+            }
+            .input-search:active~.search-box{
+                box-shadow: 0 0 5px 2px rgba($color: #ffffff, $alpha: 0.4);
+            }
+            .btn-search-box{
+                position: absolute;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                border: none;
+                border-radius: 5em;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .otros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        width: 40%;
+    }
+}
+
+.btn-sidebar {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background: rgba($color: #ffffff, $alpha: 0.4);
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.menu {
+    margin-top: 15px;
+    overflow: hidden;
+    height: 0;
+    border-radius: 5em;
+    width: 50px;
+    background: rgba($color: #ffffff, $alpha: 0.4);
+    transition: all 0.5s ease-in-out;
+
+    .btn-sidebar {
+        background: transparent;
+        color: #ffffff;
+    }
+}
+
+.menu.active{
+    height: 150px;
+    transition: all 0.5s ease-in-out;
+}
