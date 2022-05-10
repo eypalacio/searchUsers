@@ -15,16 +15,34 @@
             </button>
         </div>
     </div>
+
     <div class="busqueda">
-        <h1 class="h2">
-            Bienvenido, 
-        </h1>
-        <div class="search-box">
-            <button class="btn-search-box">
+        <div class="h3">
+            Bienvenido,
+        </div>
+        <form class="search-box">
+            <button class="btn-search-box" (click)="addBusqRec()">
                 <i class="bi bi-search"></i>
             </button>
-            <input name="search" class="input-search" placeholder="escribe aqui, si quieres buscar algo">
+            <input name="search" type="text" class="input-search" placeholder="escribe aqui, si quieres buscar algo"
+            [(ngModel)]="search"
+            >
+        </form>
+
+        <div class="tabla-results">
+
         </div>
     </div>
-    <div class="otros"></div>
+
+    <div class="otros">
+        <div class="otros-cont">
+        <app-calendar></app-calendar>
+        <div class="busquedas-recientes scroll-mine">
+            <label>busquedas recientes</label>
+
+            <div class="tabla-busquedas-recientes"></div>
+        </div>
+    </div>
+    </div>
+    <div class="tabla-busqueda"></div>
 </div>

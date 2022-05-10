@@ -1,35 +1,30 @@
 .cont-dashboard {
-    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
+    overflow: hidden;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
 
     .sidebar {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        top: 10px;
-        left: 10px;
+        position: relative;
+        width: 100px;
+        padding-top: 30px;
+        padding-left: 20px;
     }
 
     .busqueda {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-        width: 50%;
-        margin-left: 70px;
-        h1{
-            text-align: start;
-            width: 100%;
+        position: relative;
+        padding-top: 25px;
+        width: calc(100% - 450px);
+
+        .h3 {
             margin-top: 20px;
         }
-        .search-box{
+
+        .search-box {
             position: relative;
             display: flex;
             flex-direction: row;
@@ -39,7 +34,8 @@
             height: 40px;
             border-radius: 5em;
             background: rgba($color: #ffffff, $alpha: 0.4);
-            .input-search{
+
+            .input-search {
                 outline: none;
                 border: none;
                 width: 100%;
@@ -49,10 +45,12 @@
                 text-overflow: ellipsis;
                 padding-right: 40px;
             }
-            .input-search:active~.search-box{
+
+            .input-search:active~.search-box {
                 box-shadow: 0 0 5px 2px rgba($color: #ffffff, $alpha: 0.4);
             }
-            .btn-search-box{
+
+            .btn-search-box {
                 position: absolute;
                 right: 0;
                 width: 40px;
@@ -65,12 +63,38 @@
     }
 
     .otros {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 15px;
-        width: 40%;
+        margin-left: 20px;
+        width: 330px;
+        overflow: auto;
+        top: 20px;
+        
+        .otros-cont {
+            position: absolute;
+            right: 0;
+            border-bottom-right-radius: 1em;
+            background: rgba($color: #ffffff, $alpha: 0.4);
+            border-top-left-radius: 2em;
+            height: fit-content;
+            min-height: calc(100% - 37px);
+        }
+
+        .busquedas-recientes {
+            margin-top: 15px;
+            text-align: center;
+            width: 300px;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            height: 30%;
+
+            .tabla-busquedas-recientes {}
+        }
     }
 }
 
@@ -88,6 +112,7 @@
     overflow: hidden;
     height: 0;
     border-radius: 5em;
+    align-items: center;
     width: 50px;
     background: rgba($color: #ffffff, $alpha: 0.4);
     transition: all 0.5s ease-in-out;
@@ -98,7 +123,7 @@
     }
 }
 
-.menu.active{
+.menu.active {
     height: 150px;
     transition: all 0.5s ease-in-out;
 }
