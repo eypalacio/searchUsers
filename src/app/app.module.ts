@@ -10,6 +10,7 @@ import { ContenedorComponent } from './contenedor/contenedor.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TableResultComponent } from './table-result/table-result.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     CalendarComponent,
     ContenedorComponent,
     DashboardComponent,
+    TableResultComponent,
   ],
   imports: [
     BrowserModule,

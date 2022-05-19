@@ -59,7 +59,14 @@
                 border-radius: 5em;
                 background-color: transparent;
             }
+
         }
+        .tabla-busquedas{
+            position: relative;
+            padding-top: 80px;
+            width: calc(100% - 450px);
+            }
+
     }
 
     .otros {
@@ -127,3 +134,4 @@
     height: 150px;
     transition: all 0.5s ease-in-out;
 }
+
